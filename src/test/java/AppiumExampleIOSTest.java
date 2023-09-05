@@ -1,6 +1,7 @@
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.ios.options.XCUITestOptions;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -17,6 +18,8 @@ public class AppiumExampleIOSTest {
 
     @BeforeTest
     public void setUp() throws IOException {
+        DesiredCapabilities caps = new DesiredCapabilities();
+
         XCUITestOptions options = new XCUITestOptions();
         options.setCapability("platformName", "iOS");
         options.setPlatformVersion("16.4");
